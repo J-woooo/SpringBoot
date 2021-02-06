@@ -36,5 +36,6 @@ public class ConfigurationSingletonTest {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         AppConfig bean = ac.getBean(AppConfig.class);
 
+        System.out.println("bean = " + bean.getClass());
     }
 }
