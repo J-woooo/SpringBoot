@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Transactional
-public class JpaMemberRepository implements MemberRepository{
+public class JpaMemberRepository implements MemberRepository {
 
     private final EntityManager em;
 

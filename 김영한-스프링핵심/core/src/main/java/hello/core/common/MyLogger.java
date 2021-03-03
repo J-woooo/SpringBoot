@@ -20,16 +20,17 @@ public class MyLogger {
     }
 
     public void log(String message) {
-        System.out.println("["+uuid+"]"+"["+requestURL+"] "+ message);
+        System.out.println("[" + uuid + "]" + "[" + requestURL + "] " + message);
     }
+
     @PostConstruct
-    public void init(){
+    public void init() {
         uuid = UUID.randomUUID().toString();
-        System.out.println("["+uuid+"] request scope been create:" + this);
+        System.out.println("[" + uuid + "] request scope been create:" + this);
     }
 
     @PreDestroy
     public void close() {
-        System.out.println("["+uuid+"] request scope been close:" + this);
+        System.out.println("[" + uuid + "] request scope been close:" + this);
     }
 }

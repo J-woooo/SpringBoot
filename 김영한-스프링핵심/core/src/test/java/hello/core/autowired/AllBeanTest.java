@@ -38,7 +38,7 @@ public class AllBeanTest {
         private final List<DiscountPolicy> policies;
 
         @Autowired
-        public DiscountService(Map<String, DiscountPolicy> policyMap, List< DiscountPolicy> policies) {
+        public DiscountService(Map<String, DiscountPolicy> policyMap, List<DiscountPolicy> policies) {
             this.policyMap = policyMap;
             this.policies = policies;
             System.out.println("policyMap = " + policyMap);

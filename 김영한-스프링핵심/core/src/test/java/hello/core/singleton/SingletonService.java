@@ -8,7 +8,7 @@ public class SingletonService {
         return instance;
     }
 
-    private SingletonService(){
+    private SingletonService() {
     }
 
     public void logic() {

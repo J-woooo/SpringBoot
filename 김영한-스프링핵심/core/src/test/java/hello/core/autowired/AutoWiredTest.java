@@ -22,11 +22,13 @@ public class AutoWiredTest {
         public void setNoBean1(Member noBean1) {
             System.out.println("noBean1 = " + noBean1);
         }
+
         // 없으면 null값
         @Autowired
         public void setNoBean2(@Nullable Member noBean2) {
             System.out.println("noBean2 = " + noBean2);
         }
+
         // 없으면 Optional 호출
         @Autowired
         public void setNoBean3(Optional<Member> noBean3) {
