@@ -1,12 +1,11 @@
-package controller;
+package android.demo.controller;
 
-import model.UserProfile;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+import android.demo.model.UserProfile;
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -25,5 +24,17 @@ public class UserProfileController {
     @GetMapping("/user/{id}")
     public UserProfile getUserProfile(@PathVariable("id") String id) {
         return userMap.get(id);
+    }
+
+    @GetMapping("user/all")
+    public List<UserProfile> getUserProfileList() {
+        return new ArrayList<UserProfile>(userMap.values());
+    }
+
+    @PostMapping("/user/{id}")
+    public void putUserProfile(@RequestParam("id") String id,@RequestParam("name") String name, @RequestParam("phone") String phone, @RequestParam("address") String address) {
+        UserProfile userProfile = new UserProfile(id, name, phone, address);
+        userMap.put(id, userProfile);
+
     }
 }

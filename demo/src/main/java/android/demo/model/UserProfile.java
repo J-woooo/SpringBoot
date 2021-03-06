@@ -1,4 +1,4 @@
-package model;
+package android.demo.model;
 
 public class UserProfile {
     private String id;
