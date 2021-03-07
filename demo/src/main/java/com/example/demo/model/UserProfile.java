@@ -1,6 +1,7 @@
-package android.demo.model;
+package com.example.demo.model;
 
 public class UserProfile {
+
     private String id;
     private String name;
     private String phone;
@@ -44,4 +45,5 @@ public class UserProfile {
     public void setAddress(String address) {
         this.address = address;
     }
+
 }
